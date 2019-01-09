@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>模块网页配置</title>
+<script src="jquery-3.3.1.min.js"></script>
+<script src="configfunc.js"></script>
+<style type="text/css">
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: SimHei;
+}
+html, body {
+	width: 100%;
+	height: 100%;
+	min-width: 800px;
+	min-width: 1000px;
+	background-color: whitesmoke;
+}
+header {
+	position: absolute;
+	width: 100%;
+	height: 120px;
+	min-width: 1000px;
+	background-color: darkcyan;
+	color: #fff;
+	font-size: 34px;
+	padding-top: 55px;
+	padding-left: 35px;
+	margin-bottom: 2px;
+}
+#box {
+	padding-top: 122px;
+	width: 100%;
+	height: 100%;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="./menu.css"/>
+<link rel="stylesheet" type="text/css" href="./table.css"/>
+</head>
+<body>
+<header>模块配置</header>
+<div id="box">
+  <div id="divNav" onselectstart="return false">
+    <menu>
+      <div class="menu-item"> <a href="#t-1"> <span class="menu-parent active">设备信息</span> </a> </div>
+      <div class="menu-item"> <a href="#t-2"> <span class="menu-parent">登录管理</span> </a> </div>
+      <div class="menu-item"> <span class="menu-parent">网络配置</span>
+        <input type="checkbox" name="" value="">
+        <div class="menu-item-list"> <a href="#t-3-1"> <span class="menu-child">无线接入点</span> </a> <a href="#t-3-2"> <span class="menu-child">远程服务器</span> </a> </div>
+      </div>
+      <div class="menu-item"> <span class="menu-parent">高级功能</span>
+        <input type="checkbox" name="" value="">
+        <div class="menu-item-list"> <a href="#t-4-1"> <span class="menu-child">运行参数</span> </a> <a href="#t-4-2"> <span class="menu-child">远程控制</span> </a> <a href="#t-4-3"> <span class="menu-child">版本更新</span> </a> </div>
+      </div>
+    </menu>
+  </div>
+  <div id="divContent">
+    <div id="t-1">
+      <table>
+        <tr>
+          <th>芯片识别码</th>
+          <td><input id="inpChipId" disabled="true"/></td>
+        </tr>
+        <tr>
+          <th>配置页面地址</th>
+          <td><input id="inpWebIp" disabled="true"/></td>
+        </tr>
+        <tr>
+          <th>当前硬件版本</th>
+          <td><input id="inpHwVer" disabled="true"/></td>
+        </tr>
+        <tr>
+          <th>当前软件版本</th>
+          <td><input id="inpSwVer" disabled="true"/></td>
+        </tr>
+        <tr>
+          <th>热点名称</th>
+          <td><input id="inpApId" disabled="true"/></td>
+        </tr>
+      </table>
+    </div>
+    <div id="t-2">
+      <table>
+        <tr>
+          <th>旧密码</th>
+          <td><input id="inpOldPsw" type="password" class="inppsw"/></td>
+          <td id="pswhint" class="hint" rowspan="4"></td>
+        </tr>
+        <tr>
+          <th>新密码</th>
+          <td><input id="inpNewPsw" type="password" class="inppsw"/></td>
+        </tr>
+        <tr>
+          <th>确认密码</th>
+          <td><input id="inpConfirmPsw" type="password" class="inppsw"/></td>
+        </tr>
+        <tr>
+          <td colspan="2"><button id="btnPswConfig" class="btnsubmit" type="submit">应用</button></td>
+        </tr>
+      </table>
+    </div>
+    <div id="t-3-1">
+      <table>
+        <tr>
+          <th>SSID</th>
+          <td><input id="inpWifiName"/></td>
+        </tr>
+        <tr>
+          <th>密码</th>
+          <td><input id="inpWifiPsw" type="password" class="inppsw"/></td>
+        </tr>
+        <tr>
+          <th>静态IP</th>
+          <td><input id="inpEnableStaticIP" type="checkbox"/></td>
+        </tr>
+        <tr class="staticipsettings">
+          <th>IP地址</th>
+          <td><input id="inpStaticIp" class="inpipaddress"/></td>
+        </tr>
+        <tr class="staticipsettings">
+          <th>网关</th>
+          <td><input id="inpStaticGtw" class="inpipaddress"/></td>
+        </tr>
+        <tr class="staticipsettings">
+          <th>子网掩码</th>
+          <td><input id="inpStaticSbn" class="inpipaddress"/></td>
+        </tr>
+        <tr class="staticipsettings">
+          <th>DNS</th>
+          <td><input id="inpStaticDns" class="inpipaddress"/></td>
+        </tr>
+        <tr>
+          <td colspan="2"><button id="btnHotSpot" class="btnsubmit" type="submit">应用</button></td>
+        </tr>
+      </table>
+    </div>
+    <div id="t-3-2">
+      <table>
+        <tr>
+          <th>服务器地址</th>
+          <td><input id="inpServIp"/></td>
+        </tr>
+        <tr>
+          <th>网络端口</th>
+          <td><input id="inpServPort"/></td>
+        </tr>
+        <tr>
+          <th>产品名称</th>
+          <td><input id="inpServProdId"/></td>
+        </tr>
+        <tr>
+          <th>设备名称</th>
+          <td><input id="inpServDevId"/></td>
+        </tr>
+        <tr>
+          <th>鉴权信息</th>
+          <td><input id="inpServAuth" type="password"/></td>
+        </tr>
+        <tr>
+          <th>发布主题</th>
+          <td><input id="inpServTopic"/></td>
+        </tr>
+        <tr>
+          <td colspan="2"><button id="btnWebConfig" class="btnsubmit" type="submit">应用</button></td>
+        </tr>
+      </table>
+    </div>
+    <div id="t-4-1">
+      <table>
+        <tr>
+          <th>程序运行周期</th>
+          <td><input id="inpLoopTm" disabled="true"/></td>
+        </tr>
+        <tr>
+          <th>数据发送间隔</th>
+          <td><input id="inpPostTm"/></td>
+        </tr>
+        <tr>
+          <th>数据线端口</th>
+          <td><input id="inpSda" disabled="true"/></td>
+        </tr>
+        <tr>
+          <th>时钟线端口</th>
+          <td><input id="inpScl" disabled="true"/></td>
+        </tr>
+        <tr>
+          <th>温湿度端口</th>
+          <td><input id="inpDht" disabled="true"/></td>
+        </tr>
+        <tr>
+          <th>功能键端口</th>
+          <td><input id="inpBtn" disabled="true"/></td>
+        </tr>
+        <tr>
+          <th>指示灯端口</th>
+          <td><input id="inpLed" disabled="true"/></td>
+        </tr>
+        <tr>
+          <td colspan="2"><button id="btnArgsConfig" class="btnsubmit" type="submit">应用</button></td>
+        </tr>
+      </table>
+    </div>
+    <div id="t-4-2"> </div>
+    <div id="t-4-3"> </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>模块网页配置</title>
+<script src="jquery-3.3.1.min.js"></script>
+<script src="loginfunc.js"></script>
+<style type="text/css">
+.bg {
+	text-align: center;
+	margin: 0 auto;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: cadetblue
+}
+.titfont, .inpfont, .btnfont {
+	color: white;
+	font-family: SimHei
+}
+.inpfont {
+	font-size: 12pt;
+	color: #999
+}
+.btnfont {
+	font-size: 12pt;
+	color: #333
+}
+.appear {
+	height: 34px;
+	padding-left: 12px;
+	border-radius: 4px
+}
+.inpappear {
+	width: 300px;
+	display: block;
+	margin: 0 auto;
+	border: 1px solid darkcyan
+}
+.btnappear {
+	width: 312px;
+	display: inline-block;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	background-color: gold;
+	cursor: pointer;
+	border: 1px solid yellow
+}
+.btnappear:hover {
+	background-color: yellow
+}
+</style>
+</head>
+
+<body>
+<div class="bg">
+  <h1 class="titfont">管理员登陆</h1>
+  <input class="inpfont appear inpappear" id="inpPassword" type="password" placeholder="请输入密码"/>
+  <button class="btnfont appear btnappear" id="btnLogin" type="submit">登录</button>
+</div>
+</body>
+</html>

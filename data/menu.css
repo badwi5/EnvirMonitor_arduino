@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+#divNav{
+	float: left;
+	width: 200px;
+	height: 100%;
+	background-color: cadetblue;
+}
+menu {
+	width: 100%;
+	overflow: auto;
+}
+menu .menu-item {
+	position: relative;
+}
+menu .menu-item > input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	opacity: 0;
+	cursor: pointer;
+}
+menu .menu-parent:hover {
+	background-color: #73B2B4;
+}
+menu .menu-parent:active {
+	color: cadetblue;
+	background-color: whitesmoke;
+}
+menu span {
+	display: block;
+	padding: 5px 30px;
+	font-size: 18px;
+	line-height: 40px;
+	cursor: pointer;
+	color: whitesmoke
+}
+menu span:hover {
+	background-color: #73B2B4;
+}
+menu span:active {
+	color: cadetblue;
+	background-color: whitesmoke;
+}
+menu span.menu-child {
+	font-size: 16px;
+	text-indent: 20px;
+}
+menu .menu-item-list {
+	max-height: 0;
+	overflow: hidden;
+	transition: all .3s ease;
+}
+menu :checked + .menu-item-list {
+	max-height: 500px;
+}
+a:link {
+	text-decoration: none;
+	color: inherit;
+}
+a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+a:hover {
+	text-decoration: none;
+	color: inherit;
+}
+a:active {
+	text-decoration: none;
+	color: inherit;
+}

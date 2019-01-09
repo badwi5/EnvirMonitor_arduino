@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+#divContent {
+	height: 100%;
+	color: #3E3E3E;
+	overflow: hidden;
+}
+#t-1, #t-2, #t-3-1, #t-3-2, #t-4-1, #t-4-2, #t-4-3 {
+	height: 100%;
+	padding: 40px 60px;
+}
+table {
+	padding: 8px;
+	width: 450px;
+	text-align: left;
+	border-collapse: collapse;
+}
+table th {
+	padding: 8px;
+	border: 3px solid whitesmoke;
+	background-color: rgba(100,170,180,1.00);
+	width: 150px;
+	color: whitesmoke;
+	font-weight: normal;
+}
+table td {
+	padding: 8px;
+	border: 3px solid whitesmoke;
+	background-color: whitesmoke;
+	width: auto;
+}
+input {
+	margin: -4px 0;
+	width: 100%;
+	font-size: 18px;
+}
+
+/* 去除IE9+输入框的×标记 */
+input::-ms-clear {
+display: none;
+}
+/* 去除IE9+输入框的小眼睛标记 */
+input::-ms-reveal {
+display: none;
+}
+
+.btnsubmit {
+	float: right;
+	height: 25px;
+	width: 50px;
+	border: none;
+	color: white;
+	background-color: cadetblue;
+}
+.btnsubmit:hover {
+	background-color: rgba(100,170,180,1.00);
+}
+.btnsubmit:active {
+	background-color: rgba(120,190,200,1.00);
+}
+#t-2 table {
+	width: 600px;
+}
+.hint {
+	vertical-align: top;
+	font-size: 14px;
+	color: red;
+	width: 150px;
+}
+.staticipsettings {
+	display: none;
+}
+.staticipsettings th, .staticipsettings td {
+	font-size: 14px;
+	background-color: rgba(205,210,225,1.00);
+}
+.staticipsettings th {
+	color: rgba(100,100,100,1.00);
+	text-align: right;
+}
